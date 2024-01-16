@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타이머</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #timerContainer {
+      width: 300px;
+      height: 200px; /* 가로로 긴 형태 */
+      margin: 20px auto;
+      border: 2px solid #333;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      position: relative; /* 상대 위치 설정 */
+      overflow: hidden; /* 내부 넘치는 부분을 가려줌 */
+    }
+
+    #headerImage {
+      width: 100%;
+      height: 60px; /* 작은 가로로 긴 직사각형 이미지 높이 조절 */
+      object-fit: cover; /* 이미지 비율 유지 및 크롭 */
+      border-radius: 8px 8px 0 0; /* 이미지에 상단 둥근 모서리 적용 */
+    }
+
+    #timerDisplay {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    #inputArea {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 5px; /* 간격 조절 */
+    }
+
+    #inputArea label {
+      margin-bottom: 5px;
+    }
+
+    #inputArea input {
+      width: 40px;
+    }
+
+    #buttonArea {
+  display: flex;
+  justify-content: space-between; /* 버튼 사이의 여백을 균등하게 분배 */
+  position: absolute; /* 버튼 위치 설정 */
+  bottom: 10px;
+  left: 10px; /* 왼쪽 바깥 여백 설정 */
+  right:10px; /* 오른쪽 바깥 여백 설정 */
+  width: calc(100% - 20px); /* 버튼을 가로로 펼치되, 바깥 여백을 고려 */
+}
+
+#buttonArea button {
+  flex: 1; /* 버튼을 균일한 비율로 표시 */
+  max-width: 75px; /* 최대 너비 설정 */
+  background-color:#F1F6F9 ;
+  border-radius: 10px;
+  padding: 10px; /* 버튼 안의 여백을 늘림 */
+  text-align: center; /* 글자를 버튼의 정중앙으로 배치 */
+}
+  </style>
+</head>
+<body>
+
+<div id="timerContainer">
+  <img id="headerImage" src="/Users/kimbohae/Desktop/TM.HD.jpg" alt="TimerHeaderImage">
+
+  <div id="timerDisplay"></div>
+
+  <div id="inputArea">
+    <label for="hours">시간:</label>
+    <input type="number" id="hours" placeholder="시간" min="0">
+
+    <label for="minutes">분:</label>
+    <input type="number" id="minutes" placeholder="분" min="0" max="59">
+
+    <label for="seconds">초:</label>
+    <input type="number" id="seconds" placeholder="초" min="0" max="59">
+  </div>
+
+  <div id="buttonArea">
+    <button onclick="startTimer()">START</button>
+    <button onclick="stopTimer()">STOP</button>
+    <button onclick="resetTimer()">RESET</button>
+  </div>
+</div>
+
+<script>
+  var timerInterval;
+  var totalSeconds = 0;
+
+  function startTimer() {
+    var hours = parseInt(document.getElementById('hours').value) || 0;
+    var minutes = parseInt(document.getElementById('minutes').value) || 0;
+    var seconds = parseInt(document.getElementById('seconds').value) || 0;
+
+    if (hours === 0 && minutes === 0 && seconds === 0) {
+      alert('시간을 입력하세요!');
+      return;
+    }
+
+    totalSeconds = hours * 3600 + minutes * 60 + seconds;
+    updateDisplay();
+
+    timerInterval = setInterval(function () {
+      if (totalSeconds <= 0) {
+        clearInterval(timerInterval);
+        alert('타이머 종료!');
+        return;
+      }
+      totalSeconds--;
+      updateDisplay();
+    }, 1000);
+  }
+
+  function stopTimer() {
+    clearInterval(timerInterval);
+  }
+
+  function resetTimer() {
+    clearInterval(timerInterval);
+    totalSeconds = 0;
+    updateDisplay();
+  }
+
+  function updateDisplay() {
+    var hours = Math.floor(totalSeconds / 3600);
+    var minutes = Math.floor((totalSeconds % 3600) / 60);
+    var seconds = totalSeconds % 60;
+
+    document.getElementById('timerDisplay').innerHTML = `${hours}:${minutes}:${seconds}`;
+  }
+</script>
+
+</body>
+</html>
+<script>
+    var timerInterval;
+    var totalSeconds = 0;
+    var isTimerRunning = false;
+    var remainingSeconds = 0; // 추가: 정지 시간 기억 변수
+  
+    function startTimer() {
+      var hours = parseInt(document.getElementById('hours').value) || 0;
+      var minutes = parseInt(document.getElementById('minutes').value) || 0;
+      var seconds = parseInt(document.getElementById('seconds').value) || 0;
+  
+      if (hours === 0 && minutes === 0 && seconds === 0) {
+        alert('Enter the time!');
+        return;
+      }
+  
+      if (!isTimerRunning) {
+        // 수정: 정지 시간을 이용하여 시작
+        totalSeconds = remainingSeconds || hours * 3600 + minutes * 60 + seconds;
+        isTimerRunning = true;
+  
+        timerInterval = setInterval(function () {
+          if (totalSeconds <= 0) {
+            clearInterval(timerInterval);
+            isTimerRunning = false;
+            alert('Timer ends!');
+            return;
+          }
+          totalSeconds--;
+          updateDisplay();
+        }, 1000);
+      }
+    }
+  
+    function stopTimer() {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      // 추가: 정지 시간 기억
+      remainingSeconds = totalSeconds;
+    }
+  
+    function resetTimer() {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      totalSeconds = 0;
+      remainingSeconds = 0; // 추가: 초기화 시 정지 시간도 초기화
+      updateDisplay();
+    }
+  
+    function updateDisplay() {
+      var hours = Math.floor(totalSeconds / 3600);
+      var minutes = Math.floor((totalSeconds % 3600) / 60);
+      var seconds = totalSeconds % 60;
+  
+      document.getElementById('timerDisplay').innerHTML = `${hours}:${minutes}:${seconds}`;
+    }
+  </script>
+  
+  <script>
+    var timerInterval;
+    var totalSeconds = 0;
+    var isTimerRunning = false;
+    var remainingSeconds = 0; // 추가: 정지 시간 기억 변수
+  
+    function startTimer() {
+      var hours = parseInt(document.getElementById('hours').value) || 0;
+      var minutes = parseInt(document.getElementById('minutes').value) || 0;
+      var seconds = parseInt(document.getElementById('seconds').value) || 0;
+  
+      if (hours === 0 && minutes === 0 && seconds === 0) {
+        alert('Enter the time!');
+        return;
+      }
+  
+      if (!isTimerRunning) {
+        // 수정: 정지 시간을 이용하여 시작
+        totalSeconds = remainingSeconds || hours * 3600 + minutes * 60 + seconds;
+        isTimerRunning = true;
+  
+        timerInterval = setInterval(function () {
+          if (totalSeconds <= 0) {
+            clearInterval(timerInterval);
+            isTimerRunning = false;
+            alert('Timer ends!');
+            return;
+          }
+          totalSeconds--;
+          updateDisplay();
+        }, 1000);
+      }
+    }
+  
+    function stopTimer() {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      // 추가: 정지 시간 기억
+      remainingSeconds = totalSeconds;
+    }
+  
+    function resetTimer() {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      totalSeconds = 0;
+      remainingSeconds = 0; // 추가: 초기화 시 정지 시간도 초기화
+      updateDisplay();
+    }
+  
+    function updateDisplay() {
+      var hours = Math.floor(totalSeconds / 3600);
+      var minutes = Math.floor((totalSeconds % 3600) / 60);
+      var seconds = totalSeconds % 60;
+  
+      document.getElementById('timerDisplay').innerHTML = `${hours}:${minutes}:${seconds}`;
+    }
+  </script>
+
