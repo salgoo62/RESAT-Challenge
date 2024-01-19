@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body {
+  font-family: "Noto Sans", "Noto Sans KR", sans-serif;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+  }
+  /* navation */
+  .header{
+  border-bottom:solid 2px rgba(171, 177, 177, .3);
+  margin-bottom:40px;
+  
+  }
+  .nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height:70px;
+    width:1500px;
+    margin:auto;
+  }
+  ul{
+    display:flex;
+    list-style: none;
+    gap:20px;
+  }
+  li{
+    color:rgba(171, 177, 177, .8);
+  }
+  .about{
+    display:flex;
+    gap:20px;
+    align-items: center;
+  }
+  /* first */
+  .first{
+    display:flex;
+    gap:20px;
+  }
+  .first .left{
+    width:700px;
+    height:450px;
+    background-image: url("https://miniintern.com/static/images/main/main_img_1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color:white;
+    position:relative;
+  }
+  .first .right{
+    background-image: url("https://miniintern.com/static/images/main/main_img_r_1_temporary.webp");
+    width:350px;
+    height:450px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color:white;
+    position:relative;
+  
+  }
+  .first .description{
+    margin:30px;
+  }
+  .left h2,
+  .right h2{
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .left p, .right p{
+    font-size: 1.5rem;
+  }
+  .left a,.right a{
+    display: block;
+    position:absolute;
+    bottom:20px;
+    margin-left:30px;
+  }
+  /* second */
+  
+  .second{
+    margin-top:70px;
+  }
+  .description2{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:-20px;
+    margin-bottom: 20px;;
+  }
+  .description2 a{
+    color:rgb(16, 187, 255);
+  }
+  .cards{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:30px;
+    margin-bottom:50px;
+  }
+  .card img{
+    border-radius: 5px;
+  }
+  .card .description{
+    padding:15px;
+    box-sizing: border-box;
+    width:220px;
+    height:100px;
+    border-radius: 5px;
+    border:solid 1px rgba(171, 177, 177, .3);
+    border-top:none;
+    box-shadow:3px 3px 3px rgba(171, 177, 177, .3) ;
+  }
+  .card .description .span1{
+    background-color: black;
+    border-radius: 30px;
+    color:white;
+    padding:3px 10px;
+    font-size:0.9rem;
+    margin-right:10px;
+  }
+  .card .description .span2{
+    font-size:0.9rem;
+    color:rgba(125, 133, 133, 0.7)
+  }
+  .card .description .span3{
+    display:block;
+    font-size:0.75rem;
+    margin-top:10px;
+    font-weight: 700;
+  }
+  
+  /* third */
+  .third{
+    background-color: rgba(125, 125, 125, 0.3);
+    height:250px;
+  }
+  
+  .third .container > div{
+    display:flex;
+    padding-top:30px;
+  }
+  .third img{
+    border-radius: 15px;
+  }
+  .third .title{
+    border-radius: 0px 20px 20px 0;
+    padding:10px 0px 10px 30px;
+    width:100px;
+    background-color: rgb(72, 171, 253);
+    color:white;
+    font-size:0.9rem;
+    font-weight: 700;
+  }
+  .third .description div p{
+    margin-left:30px;
+  }
+  .third .description div .p1{
+    color:rgb(84, 90, 95,0.5);
+    font-size:1.1rem;
+  }
+  .third .description div .p2{
+    font-weight: 700;
+    font-size:1.3rem;
+  }
+  .third .description2{
+    display:none;
+  }
+  
+  .fourth{
+    padding-top:70px;
+  }
+  .fourth .description{
+    margin-top:-50px;
+    display:flex;
+    justify-content: space-between;
+  }
+  .fourth .description a{
+    color:rgb(16, 187, 255);
+  }
+  
+  .fourth .infos{
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+  }
+  .fourth .info{
+    width:490px;
+    height:150px;
+    border-radius:10px;
+    box-shadow:  3px 3px 3px rgba(171, 177, 177, .3);
+    padding:30px;
+    box-sizing: border-box;
+    display: flex;
+    position:relative;
+  }
+  .fourth .heart{
+    position:absolute;
+    right:5px;
+    top:5px;
+  }
+  .fourth .info_description{
+    margin-left:20px;
+  
+  }
+  .fourth .sort,
+  .fourth .what,
+  .fourth .office
+  {
+    padding-bottom:3px;
+    margin:2px;
+  }
+  .fourth .sort{
+    color:rgb(167, 167, 167,0.7);
+  }
+  .fourth .which{
+    color:skyblue;
+  }
+  .fourth .banner{
+    margin:80px 0;
+    color:white;
+    width:1000px;
+    height:130px;
+    background-image:url("https://miniintern.com/static/images/main/headhunting_banner_pc.png");
+    background-size:contain;
+    background-repeat: none;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .fourth .banner h2{
+    padding-left:70px;
+    font-size: 1.3rem;
+  }
+  .fourth .banner button{
+    margin-right:60px;
+    padding:15px;
+    border-radius: 30px;
+    color:white;
+    background-color: rgba(240, 248, 255, 0.205);
+  }
+  
+  .fifth img{
+    display:block;
+  }
+  .fifth .price{
+    background-color:rgb(28, 44, 12);
+    color:white;
+    margin-top: 0;
+    padding-left:10px;
+    font-size:0.9rem;
+  }
+  .fifth .info{
+    padding:15px;
+    box-sizing: border-box;
+    width:220px;
+    border-radius: 5px;
+    border:solid 1px rgba(171, 177, 177, .3);
+    border-top:none;
+    box-shadow:3px 3px 3px rgba(171, 177, 177, .3) ;
+    height:200px;
+  }
+  .fifth .card .info p{
+    color:rgba(133, 133, 133, 0.7);
+    font-size:0.8rem;
+    padding:0;
+    margin:4px;
+  }
+  .fifth .card .info p.title{
+    font-size:0.9rem;
+    font-weight: 700;
+    color:black;
+  }
+  .fifth .card .info p.orange{
+    color:rgb(255, 145, 0);
+    margin-top:10px;
+  }
+  .fifth .card .info div p.orange{
+    font-weight: 700;
+  }
+  .fifth .card .info div{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .six .card .info .story{
+    background-color:rgba(128, 128, 128, 0.08);
+    width:70px;
+    border-radius: 5px;
+    color:gray;
+  }
+  .six .card .info .nicknameimg{
+    border-radius: 50px;
+  }
+  .six .card .info div{
+    display:flex;
+    justify-content:flex-start;
+  }
+  .six .card .info .price{
+    background-color: transparent;
+    color:black;
+    font-weight:700;
+    font-size:0.9rem;
+    padding-left:120px;
+  }
+  footer{
+    border-top:solid 2px rgba(171, 177, 177, .3);
+    padding-top:50px;
+  }
+  footer .foot_nav{
+    display:flex;
+    justify-content: space-between;
+  }
+  footer .foot_nav ul li a{
+    color:black;
+    font-size:0.9rem;
+  }
