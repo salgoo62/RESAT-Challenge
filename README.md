@@ -7,3 +7,7 @@
 ![img3](https://github.com/salgoo62/RESAT-Challenge/blob/main/slideimg3.jpg?raw=true)
 
 ![img4](https://github.com/salgoo62/RESAT-Challenge/blob/main/slideimg4.jpg?raw=true)
+
+![arrow-left](https://github.com/salgoo62/RESAT-Challenge/blob/main/arrow-left.png?raw=true)
+
+![arrow-right](https://github.com/salgoo62/RESAT-Challenge/blob/main/arrow-right.png?raw=true)
