@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body {
+  font-family: "Noto Sans", "Noto Sans KR", sans-serif;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+  }
+
+  .header{
+  border-bottom:solid 2px rgba(171, 177, 177, .3);
+  margin-bottom:40px;
+  height: 65px;
+  }
+  .logo img {
+    margin-top: 20px; 
+  }
+  
+  .nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height:70px;
+    width:1500px;
+    margin:auto;
+  }
+  ul{
+    display:flex;
+    list-style: none;
+    gap:20px;
+  }
+  li{
+    color:rgba(171, 177, 177, .8);
+  }
+
+  ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 10px; 
+    transition: all 0.3s ease-in-out;
+    color: rgb(186, 186, 186); 
+    text-decoration: none;
+    background: #ffffff;
+  }
+
+  
+  
+  ul li a:hover {
+    color: black; 
+    background: #f7f7f7df;
+  }
+  
+  ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px; 
+    left: 0%; 
+    width: 0;
+    height: 2px;
+    background: #5da1ff;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    
+  }
+  
+  ul li a:hover::after {
+    width: 100%; 
+    left: 0; 
+  }
+  
+  
+  .about{
+    display:flex;
+    gap:20px;
+    align-items: center;
+  }
+
+
+  /* first */
+  .first{
+    display:flex;
+    gap:20px;
+  }
+  .first .left{
+    width:700px;
+    height:450px;
+    background-image: url("https://miniintern.com/static/images/main/main_img_1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color:white;
+    position:relative;
+  }
+  .first .right{
+    background-image: url("https://miniintern.com/static/images/main/main_img_r_1_temporary.webp");
+    width:350px;
+    height:450px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color:white;
+    position:relative;
+  
+  }
+  .first .description{
+    margin:30px;
+  }
+  .left h2,
+  .right h2{
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .left p, .right p{
+    font-size: 1.5rem;
+  }
+  .left a,.right a{
+    display: block;
+    position:absolute;
+    bottom:20px;
+    margin-left:30px;
+  }
+
+  /* second */
+  .second{
+    margin-top:70px;
+  }
+  .description2{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:-20px;
+    margin-bottom: 20px;;
+    width: 70%; 
+  }
+  
+  .description p {
+    width: 70%;  /* 또는 원하시는 폭으로 설정 */
+    /* 필요하다면 다른 스타일 속성 추가 */
+  }
+  
+  .description2 a{
+    color:rgb(16, 187, 255);
+  }
+  .cards{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:30px;
+    margin-bottom:50px;
+  }
+  
+  .second.cards:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);  
+  }
+
+  .second.cards {
+    transition: all 0.2s ease-in-out; 
+    box-sizing: border-box; 
+  }
+
+  .card img{
+    border-radius: 5px;
+  }
+
+ 
+  .second .card .description {
+    padding:15px;
+    box-sizing: border-box;
+    width: 220px;
+    height: 100px;
+    display: -webkit-box;  
+    -webkit-line-clamp: 2;  /* 텍스트를 2줄로 제한 */
+    -webkit-box-orient: vertical;  
+    overflow: hidden;  /* 넘치는 부분을 숨김 */
+    border-radius: 5px;
+    border: solid 1px rgba(171, 177, 177, .3);
+    border-top: none;
+    box-shadow: 3px 3px 3px rgba(171, 177, 177, .3);
+  }
+
+  .second .card .description .span1 {
+    background-color: black;
+    font-weight: bold;
+    border-radius: 30px;
+    color: white;
+    padding: 2px 8px; 
+    font-size: 0.7rem; 
+    margin-top:0px;
+    margin-left:0px;
+    margin-right: 10px;
+  }
+
+  .second .card .description .span11 { /*진행중 요소*/
+    background-color: gray;
+    font-weight: bold;
+    border-radius: 30px;
+    color: white;
+    padding: 2px 8px; 
+    font-size: 0.7rem; 
+    margin: 0px 10px 10px 0; 
+  }
+  
+  .second .card .description .span2{
+    font-size:0.9rem;
+    color:rgba(125, 133, 133, 0.7)
+  }
+  .second .card .description .span3{
+    display:block;
+    font-size:0.9rem;
+    margin-top:5px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    overflow: hidden;
+  }
+
+  .cards .card {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cards .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .cards .card:hover::after {
+    opacity: 1;
+  }
+
+  .cards .card::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); 
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cards .card .img-wrapper {
+    position: relative;
+  }
+  
+  .cards .card .img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid transparent; 
+    box-sizing: border-box;
+    transition: border 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+  
+  .cards .card:hover ::after {
+    border-color: #FE883C; /* 마우스 호버 시 테두리의 색상을 주황색으로 변경 */
+  }
+
+  .cards .card.special:hover ::after {
+    border-color: rgb(27, 196, 129); /* 마우스 호버 시 테두리의 색상을 초록색으로 변경 */
+  }
+  
+  /* third */
+  .third{
+    background-color: rgb(245, 245, 245);
+    height:250px;
+    width: calc(100% + 2 * 50px); 
+    margin: 0 -20px; 
+  }
+  
+  .third .container > div{
+    display:flex;
+    padding-top:20px;
+  }
+
+  .third img{
+    border-radius: 15px;
+  }
+  .third .title{
+    border-radius: 0px 20px 20px 0;
+    padding:10px 0px 10px 30px;
+    width:100px;
+    background-color: rgb(72, 171, 253);
+    color:white;
+    font-size:0.9rem;
+    font-weight: 700;
+  }
+  .third .description div p{
+    margin-left:30px;
+  }
+  .third .description div .p1{
+    color:rgb(84, 90, 95,0.5);
+    font-size:1.1rem;
+  }
+  .third .description div .p2{
+    font-weight: 700;
+    font-size:1.3rem;
+  }
+  .third .description2{
+    display:none;
+  }
+  
+  .fourth{
+    padding-top:70px;
+  }
+  .fourth .description{
+    margin-top:-50px;
+    display:flex;
+    justify-content: space-between;
+  }
+  .fourth .description a{
+    color:rgb(16, 187, 255);
+  }
+  
+  .fourth .infos{
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+  }
+  .fourth .info{
+    width:490px;
+    height:150px;
+    border-radius:10px;
+    box-shadow:  3px 3px 3px rgba(171, 177, 177, .3);
+    padding:30px;
+    box-sizing: border-box;
+    display: flex;
+    position:relative;
+    transition: all 0.3s ease;
+  }
+  .fourth .info:hover {
+    transform: translateY(-10px); /* Y축 방향으로 -10px만큼 이동 (위로 올라감) */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* 아래쪽에 그림자 효과를 줌 */
+  }
+  
+  .fourth .like{
+      position:absolute;
+      right:10px;
+      top:10px;
+      color:white;
+      background-color: #eaeaea;
+      border-radius: 5px;
+      width: 25px; 
+      height: 25px; 
+      text-align: center;
+      cursor: pointer;
+    }
+    .like:hover::before {
+      color: red;
+      content: "♥";
+    }
+  
+  
+  .fourth .info_description{
+    margin-left:20px;
+    max-width: 300px;
+  }
+  .fourth .sort,
+  .fourth .what,
+  .fourth .office,
+  .fourth .which
+  {
+    padding-bottom:3px;
+    margin:2px;
+  }
+  .fourth .sort{
+    color:rgb(167, 167, 167,0.7);
+  }
+  .fourth .which{
+      color: rgb(23, 161, 255);
+      font-weight: lighter;
+    }
+  
+  .fourth .what {
+    white-space: nowrap; /* 텍스트를 한 줄로 표시 */
+    overflow: hidden; /* 넘치는 부분을 숨김 */
+    text-overflow: ellipsis; /* 넘치는 텍스트를 '...'로 표시 */
+  }
+  
+  .fourth .banner{
+    margin:80px 0;
+    color:white;
+    width:1000px;
+    height:130px;
+    background-image:url("https://miniintern.com/static/images/main/headhunting_banner_pc.png");
+    background-size: 100%; /* 배경 이미지의 초기 크기를 설정 */
+  background-repeat: no-repeat; /* 배경 이미지가 반복되지 않도록 설정 */
+  background-position: center; /* 배경 이미지의 위치를 가운데로 설정 */
+  transition: background-size 0.5s; /* 배경 이미지 크기의 변화에 transition을 적용 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fourth .banner:hover {
+  background-size: 120%; /* 마우스를 호버하면 배경 이미지의 크기를 120%로 변경 */
+}
+  .fourth .banner h2{
+    padding-left:70px;
+    font-size: 1.3rem;
+  }
+  .fourth .banner button{
+    margin-right:60px;
+    padding:15px;
+    border-radius: 30px;
+    color:white;
+    background-color: rgba(240, 248, 255, 0.205);
+  }
+
+  .fifth .container .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container .header-content h2 {
+    margin-bottom: -10px; 
+    font-weight: 300; 
+  }
+  
+  .container .header-content p {
+    font-weight: 300; 
+  }
+  
+  .view-all {
+    color: rgb(72, 171, 253);
+    cursor: pointer;
+  }
+  
+  .fifth img{
+    display:block;
+  }
+  .fifth .price{
+    background-color:rgb(56, 64, 64);
+    color:white;
+    margin-top: 0;
+    padding-left:10px;
+    font-size:0.9rem;
+    font-weight: bold;
+  }
+  .fifth .card .price-paid {
+    background-color:rgb(240, 243, 243);
+    color: rgb(56, 64, 64);
+    margin-top: 0;
+    padding-left:10px;
+    font-size:0.9rem;
+    font-weight: bold;
+  }
+  .fifth .orange{
+      margin-top: 0; /* 상단 여백을 없앰 */
+      margin-bottom: 2px; /* 하단 여백을 2px로 줄임 */
+  }  
+  .fifth .info{
+    padding:15px;
+    box-sizing: border-box;
+    width:220px;
+    border-radius: 5px;
+    border:solid 1px rgba(171, 177, 177, .3);
+    border-top:none;
+    height:200px;
+    display: flex; 
+    flex-direction: column; 
+  }
+
+  .fifth .cards .card {
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* 변환의 변화에 transition을 적용 */
+    background-color: white;
+    overflow: hidden; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .fifth .cards .card:hover {
+    transform: translateY(-10px); /* 마우스를 호버하면 Y축 방향으로 -10px만큼 이동 */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .fifth .card .info p{
+    color:rgba(133, 133, 133, 0.7);
+    font-size:0.8rem;
+    padding:0;
+    margin:4px;
+  }
+  .fifth .card .info p.title{
+    font-size:0.9rem;
+    font-weight: 700;
+    color:black;
+    line-height: 1.2em; 
+    height: 2.4em; 
+    overflow: hidden;
+  }
+  .fifth .card .info p.orange{
+    color:rgb(255, 145, 0);
+    margin-top:10px;
+    margin-bottom: 0;
+  }
+  .fifth .card .info div p.orange{
+    font-weight: 700;
+  }
+
+  .fifth .card .info p.green{
+    color:rgb(27, 196, 129);
+    margin-top:10px;
+    margin-bottom: 0;
+  }
+  .fifth .card .info div p.green{
+    font-weight: 700;
+  }
+  
+  .fifth .card .info div{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .fifth .info:hover {
+    transform: none; /* 초기화 */
+    box-shadow: none; /* 초기화 */
+  }
+  
+.six .container {
+    display: flex;
+    flex-direction: column; 
+  }
+
+.six .container .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+.six .cards {
+    display: flex;
+    margin: 0;
+    justify-content: space-between; 
+   }
+
+.six .cards .card .info .story{
+    border-radius: 5px;
+    font-size: small;
+    color:gray; 
+    text-overflow: ellipsis;
+    display: inline-block;
+    padding: 1px;
+    margin-top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+
+.six .card .info .nicknameimg{
+    border-radius: 50px;
+  }
+.six .card .info div{
+    display:flex;
+    justify-content:flex-start;
+  }
+.six .card .info .price{
+    background-color: transparent;
+    color:black;
+    font-weight:700;
+    font-size:0.8rem;
+    padding-left:120px;
+    white-space: nowrap;
+    margin-right: 10px;
+  }
+  footer{
+    border-top:solid 2px rgba(171, 177, 177, .3);
+    padding-top:20px;
+    margin-top: 50px;
+  }
+  footer .foot_nav{
+    display:flex;
+    justify-content: space-between;
+  }
+  footer .foot_nav ul li a{
+    color:black;
+    font-size:0.9rem;
+  }
+
+  footer .foot_nav ul li a:hover { 
+    color: blue; 
+    cursor: pointer;
+}
+
+  
