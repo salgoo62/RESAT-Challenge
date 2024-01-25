@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7e7373;
+    padding: 20px 100px;
+    position: relative;
+    height: 80px;
+
+  }
+  
+  
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  ul li {
+    list-style: none;
+    font-size: 20px;
+    margin: 0 15px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.menu-icon div {
+    width: 2rem;
+    height: 0.20rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.menu-icon:hover div {
+    background: #000000; /* 추가 - 변경하려는 색상으로 수정 */
+}
+
+  @media (max-width: 750px) {
+    .logo {
+      flex: 3;
+    }
+    
+    .menu-icon {
+        display: flex;
+        margin-right: -60px;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: auto; /* 높이를 자동으로 설정 */
+        background-color: rgba(0,0,0,0.9);
+        transition: transform 0.3s ease-in-out;
+        right: 0;
+        /* 오른쪽에서 나오던 메뉴를 위에서 나오도록 변경 */
+    }
+
+
+    #menu li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu li:hover {
+        background-color: #a7a7a7; /* 변경하려는 색상으로 수정 */
+    }
+
+    #menu li a:hover {
+        color: #000000; /* 변경하려는 색상으로 수정 */
+    }
+    
+    
+}
+
+@media (min-width: 750px) {
+
+    .menu-icon {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #menu {
+        display: flex;
+        position: static;
+        top: unset;
+    }
+
+    #menu li a:hover {
+        color: #000000; /* 변경하려는 색상으��� ��정 */
+    }
+
+}
