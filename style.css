@@ -60,7 +60,7 @@
 }
 
 .menu-icon:hover div {
-    background: #000000; /* 추가 - 변경하려는 색상으로 수정 */
+    background: #000000;
 }
 
   @media (max-width: 750px) {
@@ -81,11 +81,11 @@
         position: absolute;
         top: 100%;
         width: 100%;
-        height: auto; /* 높이를 자동으로 설정 */
+        height: auto; 
         background-color: rgba(0,0,0,0.9);
         transition: transform 0.3s ease-in-out;
         right: 0;
-        /* 오른쪽에서 나오던 메뉴를 위에서 나오도록 변경 */
+        
     }
 
 
@@ -96,11 +96,11 @@
     }
 
     #menu li:hover {
-        background-color: #a7a7a7; /* 변경하려는 색상으로 수정 */
+        background-color: #a7a7a7; 
     }
 
     #menu li a:hover {
-        color: #000000; /* 변경하려는 색상으로 수정 */
+        color: #000000; 
     }
     
     
@@ -124,7 +124,7 @@
     }
 
     #menu li a:hover {
-        color: #000000; /* 변경하려는 색상으��� ��정 */
+        color: #000000; 
     }
 
 }
