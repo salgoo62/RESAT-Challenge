@@ -1,29 +1,22 @@
-function toggleMenu() {
-    var menu = document.getElementById('menu');
-    if (window.innerWidth > 750) {
-        menu.style.display = "flex";
+const ID = 'salgooid';
+const PW = 'salgoopw';
+
+function login() {
+    const usernameInput = document.getElementById('username').value;
+    const passwordInput = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
+
+    if (usernameInput !== ID && passwordInput !== PW) {
+        alert('ID와 password가 잘못되었습니다.');
+        errorMessage.textContent = 'ID와 password가 잘못되었습니다.';
+    } else if (usernameInput !== ID) {
+        alert('ID가 잘못되었습니다.');
+        errorMessage.textContent = 'ID가 잘못되었습니다.';
+    } else if (passwordInput !== PW) {
+        alert('password가 잘못되었습니다.');
+        errorMessage.textContent = 'password가 잘못되었습니다.';
     } else {
-        menu.style.display = (menu.style.display === "none") ? "flex" : "none";
-        menu.style.transform = (menu.style.display === "none") ? "" : "translateY(0%)";
+        alert('로그인이 되었습니다');
+        errorMessage.textContent = '';
     }
 }
-
-document.addEventListener('click', function(event) {
-    var menu = document.getElementById('menu');
-    var menuIcon = document.querySelector('.menu-icon');
-    if (window.innerWidth <= 750) {
-        if (event.target !== menu && event.target.parentNode !== menu && event.target !== menuIcon && event.target.parentNode !== menuIcon) {
-            menu.style.display = 'none';
-            menu.style.transform = "";
-        }
-    }
-});
-
-window.addEventListener('resize', function() {
-    var menu = document.getElementById('menu');
-    if (window.innerWidth > 750) {
-        menu.style.display = "flex";
-    } else {
-        menu.style.display = "none";
-    }
-});

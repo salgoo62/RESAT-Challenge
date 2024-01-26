@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Noto Sans", "Noto Sans KR", sans-serif;
+      }
+      
+.login-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 20px;
+    border: 0.5px solid black;
+    padding: 20px; 
+    border-radius: 10px; 
+    background-color:  #f2f2f2;
+}
+
+.login-title {  
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    font-size: small;
+}
