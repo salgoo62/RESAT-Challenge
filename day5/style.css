@@ -78,12 +78,12 @@ body {
   }
 
 
-  /* first */
-  .first{
+  /* one */
+  .one{
     display:flex;
     gap:20px;
   }
-  .first .left{
+  .one .left{
     width:700px;
     height:450px;
     background-image: url("https://miniintern.com/static/images/main/main_img_1.webp");
@@ -93,7 +93,7 @@ body {
     color:white;
     position:relative;
   }
-  .first .right{
+  .one .right{
     background-image: url("https://miniintern.com/static/images/main/main_img_r_1_temporary.webp");
     width:350px;
     height:450px;
@@ -104,7 +104,7 @@ body {
     position:relative;
   
   }
-  .first .description{
+  .one .description{
     margin:30px;
   }
   .left h2,
@@ -122,41 +122,51 @@ body {
     margin-left:30px;
   }
 
-  /* second */
-  .second{
+  /* two */
+  .two{
     margin-top:70px;
   }
-  .description2{
+
+  .container h2{
+    font-size: 21px;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  
+  .description a{
+    ont-size: 0.875rem;
+    color: rgb(23, 161, 255);
+    font-weight: 400;
+    }
+
+  .two.description2{
     display:flex;
     align-items: center;
     justify-content: space-between;
     margin-top:-20px;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
     width: 70%; 
   }
+  .two .description{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
   
-  .description p {
-    width: 70%;  /* 또는 원하시는 폭으로 설정 */
-    /* 필요하다면 다른 스타일 속성 추가 */
-  }
-  
-  .description2 a{
-    color:rgb(16, 187, 255);
-  }
+
   .cards{
     display:flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap:30px;
     margin-bottom:50px;
   }
   
-  .second.cards:hover {
+  .two.cards:hover {
     transform: translateY(-10px); 
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);  
   }
 
-  .second.cards {
+  .two.cards {
     transition: all 0.2s ease-in-out; 
     box-sizing: border-box; 
   }
@@ -166,7 +176,7 @@ body {
   }
 
  
-  .second .card .description {
+  .two .card .description {
     padding:15px;
     box-sizing: border-box;
     width: 220px;
@@ -181,7 +191,7 @@ body {
     box-shadow: 3px 3px 3px rgba(171, 177, 177, .3);
   }
 
-  .second .card .description .span1 {
+  .two .card .description .span1 {
     background-color: black;
     font-weight: bold;
     border-radius: 30px;
@@ -193,7 +203,7 @@ body {
     margin-right: 10px;
   }
 
-  .second .card .description .span11 { /*진행중 요소*/
+  .two .card .description .span11 { /*진행중 요소*/
     background-color: gray;
     font-weight: bold;
     border-radius: 30px;
@@ -203,11 +213,11 @@ body {
     margin: 0px 10px 10px 0; 
   }
   
-  .second .card .description .span2{
+  .two .card .description .span2{
     font-size:0.9rem;
     color:rgba(125, 133, 133, 0.7)
   }
-  .second .card .description .span3{
+  .two .card .description .span3{
     display:block;
     font-size:0.9rem;
     margin-top:5px;
@@ -267,64 +277,195 @@ body {
     border-color: rgb(27, 196, 129); /* 마우스 호버 시 테두리의 색상을 초록색으로 변경 */
   }
   
-  /* third */
-  .third{
+  /* three */
+  .three{
     background-color: rgb(245, 245, 245);
     height:250px;
     width: calc(100% + 2 * 50px); 
     margin: 0 -20px; 
   }
   
-  .third .container > div{
+  .three .container > div{
     display:flex;
     padding-top:20px;
   }
 
-  .third img{
+  .three img{
     border-radius: 15px;
   }
-  .third .title{
+  .three .title{
     border-radius: 0px 20px 20px 0;
-    padding:10px 0px 10px 30px;
+    padding:8px 22px 9px 30px;
     width:100px;
     background-color: rgb(72, 171, 253);
     color:white;
-    font-size:0.9rem;
-    font-weight: 700;
+    font-size:12px;
+    font-weight: bold;
+    height: 30px;
+    display: flex; /* Flexbox 레이아웃 사용 */
+    justify-content: center; /* 내용을 수평 중앙에 배치 */
+    align-items: center; /* 내용을 수직 중앙에 배치 */
   }
-  .third .description div p{
+
+  .three .description {
+    display: flex; /* Flexbox 레이아웃 사용 */
+    flex-direction: column; /* 내용을 수직으로 정렬 */
+    line-height: 1.0;
+}
+
+  .three .description div p{
     margin-left:30px;
   }
-  .third .description div .p1{
+  .three .description div .p1{
     color:rgb(84, 90, 95,0.5);
     font-size:1.1rem;
   }
-  .third .description div .p2{
+  .three .description div .p2{
     font-weight: 700;
     font-size:1.3rem;
+    line-height: 1.5;
+    width: 100%; /* 너비를 100%로 설정 */
+    white-space: nowrap; /* 텍스트가 너무 길 경우 다음 줄로 넘어가지 않고 한 줄에 표시 */
+    overflow: hidden; /* 텍스트가 너비를 초과할 경우 초과하는 부분을 숨김 */
+    text-overflow: ellipsis; /* 텍스트가 너비를 초과할 경우 초과하는 부분을 '...'로 표시 */
   }
-  .third .description2{
+  
+  .three .description2{
     display:none;
   }
-  
-  .fourth{
+
+  .slide_main {
+    width: 400px;  /* 슬라이드 상자 너비 변경 */
+    height: 200px; /* 슬라이드 상자 높이 변경 */
+    position: relative;
+    overflow: hidden;
+    user-select: none; /* 사용자 선택 금지 */
+    margin-left: 0; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+
+}
+
+.slide_wrapper {
+    display: flex;
+    transition: transform 1s;
+}
+
+.slide_carousel {
+    flex: 0 0 100%; /* 슬라이드 너비를 상자 너비에 맞게 변경 */
+    height: 200px;
+    position: relative;
+    border-radius: 10px; /* 슬라이드의 모서리를 둥글게 만듭니다. */
+    background: linear-gradient(to bottom right, #F9F5F6, #dce2ed);
+    display: flex; /* Flexbox 레이아웃 사용 */
+    justify-content: center; /* 내용을 수평 중앙에 배치 */
+    align-items: center; /* 내용을 수직 중앙에 배치 */
+}
+
+.slide_carousel p {
+    margin: 0; /* <p> 태그의 margin을 제거합니다. */
+    padding: 0; /* <p> 태그의 padding을 제거합니다. */
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+}
+
+/* 슬라이드 버튼 */
+.slide_button_container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slide_button {
+    width: 30px;
+    height: 30px;
+    color: #000;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.slide_prev,
+.slide_next {
+    background: none; 
+    border: none;
+    padding: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* 슬라이드 갯수 표시 */
+.slide_page {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.slide_number {
+    width: 5px;
+    height: 5px;
+    background-color: #aaa;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slide_number.active {
+    background-color: #333; /* 활성화된 페이지 표시를 위한 색상 변경 */
+}
+
+.four{
     padding-top:70px;
   }
-  .fourth .description{
-    margin-top:-50px;
-    display:flex;
-    justify-content: space-between;
-  }
-  .fourth .description a{
-    color:rgb(16, 187, 255);
+
+  .description a{
+    font-size: 0.875rem;
+    color: rgb(23, 161, 255);
+    font-weight: 400;
+    text-decoration: none;
+     }
+
+  .four h2 {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 4px;
+    word-break: keep-all;
+    margin-right: 4px;
   }
   
-  .fourth .infos{
+  .four .description p{
+    font-size: 16px;
+    margin: 0px;
+    word-break: keep-all;
+    font-weight: 400;
+  }
+  .four .description{
+  box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    vertical-align: baseline;
+    color: rgb(26, 27, 28);
+  }
+
+  .four .description p {
+    margin-right: 20px; /* 문장과 링크 사이에 간격을 줍니다 */
+  }
+  
+  .four .infos{
     display:flex;
     flex-wrap: wrap;
     gap:20px;
   }
-  .fourth .info{
+  .four .info{
     width:490px;
     height:150px;
     border-radius:10px;
@@ -335,12 +476,12 @@ body {
     position:relative;
     transition: all 0.3s ease;
   }
-  .fourth .info:hover {
+  .four .info:hover {
     transform: translateY(-10px); /* Y축 방향으로 -10px만큼 이동 (위로 올라감) */
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* 아래쪽에 그림자 효과를 줌 */
   }
   
-  .fourth .like{
+  .four .like{
       position:absolute;
       right:10px;
       top:10px;
@@ -358,33 +499,33 @@ body {
     }
   
   
-  .fourth .info_description{
+  .four .info_description{
     margin-left:20px;
     max-width: 300px;
   }
-  .fourth .sort,
-  .fourth .what,
-  .fourth .office,
-  .fourth .which
+  .four .sort,
+  .four .what,
+  .four .office,
+  .four .which
   {
     padding-bottom:3px;
     margin:2px;
   }
-  .fourth .sort{
+  .four .sort{
     color:rgb(167, 167, 167,0.7);
   }
-  .fourth .which{
+  .four .which{
       color: rgb(23, 161, 255);
       font-weight: lighter;
     }
   
-  .fourth .what {
+  .four .what {
     white-space: nowrap; /* 텍스트를 한 줄로 표시 */
     overflow: hidden; /* 넘치는 부분을 숨김 */
     text-overflow: ellipsis; /* 넘치는 텍스트를 '...'로 표시 */
   }
   
-  .fourth .banner{
+  .four .banner{
     margin:80px 0;
     color:white;
     width:1000px;
@@ -398,14 +539,14 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.fourth .banner:hover {
+.four .banner:hover {
   background-size: 120%; /* 마우스를 호버하면 배경 이미지의 크기를 120%로 변경 */
 }
-  .fourth .banner h2{
+  .four .banner h2{
     padding-left:70px;
     font-size: 1.3rem;
   }
-  .fourth .banner button{
+  .four .banner button{
     margin-right:60px;
     padding:15px;
     border-radius: 30px;
@@ -413,7 +554,7 @@ body {
     background-color: rgba(240, 248, 255, 0.205);
   }
 
-  .fifth .container .header-content {
+  .five .container .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -433,10 +574,10 @@ body {
     cursor: pointer;
   }
   
-  .fifth img{
+  .five img{
     display:block;
   }
-  .fifth .price{
+  .five .price{
     background-color:rgb(56, 64, 64);
     color:white;
     margin-top: 0;
@@ -444,7 +585,7 @@ body {
     font-size:0.9rem;
     font-weight: bold;
   }
-  .fifth .card .price-paid {
+  .five .card .price-paid {
     background-color:rgb(240, 243, 243);
     color: rgb(56, 64, 64);
     margin-top: 0;
@@ -452,11 +593,11 @@ body {
     font-size:0.9rem;
     font-weight: bold;
   }
-  .fifth .orange{
+  .five .orange{
       margin-top: 0; /* 상단 여백을 없앰 */
       margin-bottom: 2px; /* 하단 여백을 2px로 줄임 */
   }  
-  .fifth .info{
+  .five .info{
     padding:15px;
     box-sizing: border-box;
     width:220px;
@@ -468,7 +609,7 @@ body {
     flex-direction: column; 
   }
 
-  .fifth .cards .card {
+  .five .cards .card {
     position: relative;
     transition: transform 0.3s ease-in-out; /* 변환의 변화에 transition을 적용 */
     background-color: white;
@@ -476,18 +617,18 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   }
   
-  .fifth .cards .card:hover {
+  .five .cards .card:hover {
     transform: translateY(-10px); /* 마우스를 호버하면 Y축 방향으로 -10px만큼 이동 */
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   }
 
-  .fifth .card .info p{
+  .five .card .info p{
     color:rgba(133, 133, 133, 0.7);
     font-size:0.8rem;
     padding:0;
     margin:4px;
   }
-  .fifth .card .info p.title{
+  .five .card .info p.title{
     font-size:0.9rem;
     font-weight: 700;
     color:black;
@@ -495,31 +636,31 @@ body {
     height: 2.4em; 
     overflow: hidden;
   }
-  .fifth .card .info p.orange{
+  .five .card .info p.orange{
     color:rgb(255, 145, 0);
     margin-top:10px;
     margin-bottom: 0;
   }
-  .fifth .card .info div p.orange{
+  .five .card .info div p.orange{
     font-weight: 700;
   }
 
-  .fifth .card .info p.green{
+  .five .card .info p.green{
     color:rgb(27, 196, 129);
     margin-top:10px;
     margin-bottom: 0;
   }
-  .fifth .card .info div p.green{
+  .five .card .info div p.green{
     font-weight: 700;
   }
   
-  .fifth .card .info div{
+  .five .card .info div{
     display:flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  .fifth .info:hover {
+  .five .info:hover {
     transform: none; /* 초기화 */
     box-shadow: none; /* 초기화 */
   }
@@ -588,5 +729,9 @@ body {
     color: blue; 
     cursor: pointer;
 }
+
+
+
+
 
   
