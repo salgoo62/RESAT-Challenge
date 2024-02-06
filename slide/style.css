@@ -1,0 +1,78 @@
+.slide_main {
+    width: 400px;  /* 슬라이드 상자 너비 변경 */
+    height: 200px; /* 슬라이드 상자 높이 변경 */
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    user-select: none; /* 사용자 선택 금지 */
+}
+
+.slide_wrapper {
+    display: flex;
+    transition: transform 1s;
+}
+
+.slide_carousel {
+    flex: 0 0 100%; /* 슬라이드 너비를 상자 너비에 맞게 변경 */
+    position: relative;
+}
+
+.slide_carousel img {
+    display: block;
+    width: 100%;
+    height: auto; /* 이미지 높이를 슬라이드 상자 높이에 맞게 변경 */
+    position: absolute;
+}
+
+/* 슬라이드 버튼 */
+.slide_button_container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slide_button {
+    width: 30px;
+    height: 30px;
+    color: #000;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.slide_prev,
+.slide_next {
+    background: none; 
+    border: none;
+    padding: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* 슬라이드 갯수 표시 */
+.slide_page {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.slide_number {
+    width: 5px;
+    height: 5px;
+    background-color: #aaa;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slide_number.active {
+    background-color: #333; /* 활성화된 페이지 표시를 위한 색상 변경 */
+}
