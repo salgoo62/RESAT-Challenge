@@ -76,3 +76,23 @@
 .slide_number.active {
     background-color: #333; /* 활성화된 페이지 표시를 위한 색상 변경 */
 }
+
+.slide_prev::before, .slide_next::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: solid black;
+    border-width: 2px 2px 0 0;
+}
+
+.slide_prev::before {
+    transform: rotate(45deg);
+    margin-right: 5px;
+}
+
+.slide_next::before {
+    transform: rotate(-135deg);
+    margin-left: 5px;
+}
+
