@@ -13,3 +13,5 @@
 ![arrow-right](https://github.com/salgoo62/RESAT-Challenge/blob/main/day6/arrow-right.png?raw=true)
 
 ![img5](https://raw.githubusercontent.com/salgoo62/archive/refs/heads/main/2.png?raw=true)
+
+![img6](https://raw.githubusercontent.com/salgoo62/archive/refs/heads/main/3.png?raw=true)
