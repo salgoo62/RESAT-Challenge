@@ -9,3 +9,7 @@
 ![arrow-left](https://github.com/salgoo62/RESAT-Challenge/blob/main/day6/arrow-left.png?raw=true)
 
 ![arrow-right](https://github.com/salgoo62/RESAT-Challenge/blob/main/day6/arrow-right.png?raw=true)
+
+![img5](https://github.com/salgoo62/archive/blob/main/001.jpg?raw=true)
+
+![img6](https://github.com/salgoo62/archive/blob/main/002.jpg?raw=true)
