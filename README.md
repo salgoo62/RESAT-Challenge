@@ -15,3 +15,5 @@
 ![img5](https://raw.githubusercontent.com/salgoo62/archive/refs/heads/main/2.png?raw=true)
 
 ![img6](https://raw.githubusercontent.com/salgoo62/archive/refs/heads/main/3.png?raw=true)
+
+![img7](https://github.com/salgoo62/archive/blob/main/SEAT%20NEXT%20logo%20(%20Banner%20)%20PNG.png?raw=true)
